@@ -20,7 +20,8 @@ namespace :search do
   end
 end
 
-if Rails.env.development?
-  Rake::Task["db:create"].enhance(["search:setup"])
-  Rake::Task["db:drop"].enhance(["search:destroy"])
-end
+# Because we don't need ElasticSearch
+# if Rails.env.development?
+#   Rake::Task["db:create"].enhance(["search:setup"])
+#   Rake::Task["db:drop"].enhance(["search:destroy"])
+# end
